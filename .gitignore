@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+results/
+reports/*
+!reports/.gitkeep
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.pem
+.env

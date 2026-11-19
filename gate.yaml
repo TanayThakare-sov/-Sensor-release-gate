@@ -1,0 +1,14 @@
+# Release gate policy.
+thresholds:
+  min_kernel: "5.4"         # oldest kernel the sensor supports
+  max_cpu_percent: 30       # sensor CPU during the load burst
+  max_rss_mb: 300           # sensor resident memory
+regression:
+  tolerance_percent: 25     # allowed growth over the stored baseline
+load:
+  exec_count: 1500          # execve calls generated for the overhead test
+environments:               # the matrix the AWS and Azure Terraform builds
+  - ubuntu-22.04
+  - ubuntu-24.04
+  - amazon-linux-2023
+  - azure-ubuntu-22.04
